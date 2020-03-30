@@ -23,13 +23,15 @@ function anagramCheck(str1, str2){
     str2 = str2.trim()
     var array2 = new Array()
 
-    for(let i = 0; i < str1.length; i++){
-        array1.push(str1[i])
+    if(array1.length !== array2.length){
+        return false
     }
 
-    for(let i = 0; i < str2.length; i++){
+    for(let i = 0; i < str1.length; i++){
+        array1.push(str1[i])
         array2.push(str2[i])
     }
+
 
     array1 = array1.sort()
     array2 = array2.sort()
@@ -52,6 +54,6 @@ function anagramCheck(str1, str2){
     
 
 
-
+console.log(anagramCheck('abcde2', 'c2abed'))
 console.log(anagramCheck('abcde265', 'c2abed'))
 console.log(anagramCheck('CharM', 'mARcH'))
